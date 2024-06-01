@@ -2,10 +2,9 @@ import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix, classification_report
 import pickle
 
-dataset_url = "https://raw.githubusercontent.com/Humaid-Mohiuddin/Disease-Symptoms-and-Patient-Profile-Project/main/Disease_symptom_and_patient_profile_dataset.csv"
+dataset_url = "https://raw.githubusercontent.com/Humaid-Mohiuddin/Disease-Symptoms-and-Patient-Profile-Project/master/Disease_symptom_and_patient_profile_dataset.csv"
 df = pd.read_csv(dataset_url)
 
 # Creating a dictionary to store the encoders

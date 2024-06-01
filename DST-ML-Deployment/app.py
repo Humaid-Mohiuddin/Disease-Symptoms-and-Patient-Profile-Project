@@ -7,6 +7,8 @@ app = Flask(__name__)
 
 # Loading the pickle model
 model = pickle.load(open("model.pkl", "rb"))
+
+# Loading the pickle encoders
 encoders = pickle.load(open("encoders.pkl", "rb"))
 
 @app.route('/')
@@ -37,11 +39,9 @@ def predict():
 
     # Converting to DataFrame
     input_df = pd.DataFrame([input_data])
-    print(input_df)
 
     # Predicting
     prediction = model.predict(input_df)
-    print(prediction.tolist())
 
     return jsonify({'prediction':prediction.tolist()})
 
