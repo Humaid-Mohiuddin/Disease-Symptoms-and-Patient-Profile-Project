@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+}
+
+.radio-group {
+    /* display: flex; */
+    justify-content: space-around;
+    margin: 10px;
+
+}
+
+.radio-group,
+label {
+    margin-right: 50px;
+}
+
+input[type="radio"],
+label {
+    margin-top: 10px;
+}
+
+input[type="number"],
+select {
+    width: 90%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+#prediction-result {
+    margin: 10px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+button#theme-toggle {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #555;
+    color: #fff;
+}
+
+button#theme-toggle:hover {
+    background-color: #333;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #d1d1d1;
+}
+
+.dark-theme .container {
+    background-color: #14001e;
+}
+
+.dark-theme input[type=number],
+.dark-theme select {
+    background-color: #e0e0e0;
+}

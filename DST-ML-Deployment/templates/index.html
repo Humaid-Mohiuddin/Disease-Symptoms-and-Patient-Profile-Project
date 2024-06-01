@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Health Prediction</h1>
+        <form id="prediction-form" method="POST">
+            <label for="disease">Disease:</label>
+            <select id="disease" name="disease"></select>
+
+            <label>Fever:</label>
+            <div class="radio-group">
+                <input type="radio" id="fever-yes" name="fever" value="Yes">
+                <label for="fever-yes">Yes</label>
+                <input type="radio" id="fever-no" name="fever" value="No">
+                <label for="fever-no">No</label>
+            </div>
+
+            <label>Cough:</label>
+            <div class="radio-group">
+                <input type="radio" id="cough-yes" name="cough" value="Yes">
+                <label for="cough-yes">Yes</label>
+                <input type="radio" id="cough-no" name="cough" value="No">
+                <label for="cough-no">No</label>
+            </div>
+
+            <label>Fatigue:</label>
+            <div class="radio-group">
+                <input type="radio" id="fatigue-yes" name="fatigue" value="Yes">
+                <label for="fatigue-yes">Yes</label>
+                <input type="radio" id="fatigue-no" name="fatigue" value="No">
+                <label for="fatigue-no">No</label>
+            </div>
+
+            <label>Difficulty Breathing:</label>
+            <div class="radio-group">
+                <input type="radio" id="difficulty-yes" name="difficulty_breathing" value="Yes">
+                <label for="difficulty-yes">Yes</label>
+                <input type="radio" id="difficulty-no" name="difficulty_breathing" value="No">
+                <label for="difficulty-no">No</label>
+            </div>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="18" max="100" placeholder="18">
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+
+            <label for="blood-pressure">Blood Pressure:</label>
+            <select id="blood-pressure" name="blood_pressure">
+                <option value="Normal">Normal</option>
+                <option value="Low">Low</option>
+                <option value="High">High</option>
+            </select>
+
+            <label for="cholesterol">Cholesterol Level:</label>
+            <select id="cholesterol" name="cholesterol">
+                <option value="Normal">Normal</option>
+                <option value="Low">Low</option>
+                <option value="High">High</option>
+            </select>
+
+            <button type="submit">Predict Outcome</button>
+        </form>
+        <br>
+        <div id="prediction-result"></div>
+        <button id="theme-toggle">Toggle Dark Theme</button>
+    </div>
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+
+</html>
