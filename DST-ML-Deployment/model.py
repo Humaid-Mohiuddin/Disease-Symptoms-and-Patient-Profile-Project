@@ -23,9 +23,9 @@ pickle.dump(encoders, open("encoders.pkl", "wb"))
 X = df.drop(["Outcome Variable"], axis=1)
 Y = df["Outcome Variable"]
 
-x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, random_state=0)
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.15, random_state=0)
 
-rf_model = RandomForestClassifier(max_leaf_nodes = 40, n_estimators = 19, random_state=0)
+rf_model = RandomForestClassifier(max_leaf_nodes = 60, n_estimators = 12, random_state=0)
 rf_model.fit(x_train, y_train)
 
 pickle.dump(rf_model, open("model.pkl", "wb"))
